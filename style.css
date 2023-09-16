@@ -18,11 +18,11 @@ body{
 }
 .grid-board{
     display: grid;
-    gap: 2px;
+    gap: 1px;
     border: 2px black solid;
     width: 600px;
     height: 600px;
-    background-color: white;
+    background-color: lightgrey;
     margin: 30px;
 }
 .options{
