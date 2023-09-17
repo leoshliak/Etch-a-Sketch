@@ -3,6 +3,8 @@ const rangeValue = document.querySelector('.slider-info');
 const gridBoard = document.querySelector('.grid-board');
 const black = document.querySelector('#default-btn');
 const eraser = document.querySelector('#eraser-mode');
+const colorPickerInput = document.querySelector('#colorPicker')
+const clear = document.querySelector('#clear')
 rangeValue.innerHTML = `${slider.value} x ${slider.value} ` ;
 slider.oninput = function() {
     rangeValue.innerHTML = `${slider.value} x ${slider.value} `;
@@ -29,11 +31,20 @@ function changeSize(input){
   createElement(input);
 }
 function colorSquare(){
+  if(color === "random"){
+    this.style.backgroundColor = `hsl(${Math.random()* 360}, 100%,50%)`;
+  }
+  else{
   this.style.backgroundColor = color;
+  }
 }
 
 function changeColor(choise){
  color = choise;
 }
+colorPickerInput.addEventListener('input', (e) => {color = e.target.value});
 
-
+clear.addEventListener('click', () =>{
+  let squares = gridBoard.querySelectorAll("div");
+  squares.forEach((div) => (div.style.backgroundColor = "white"));
+});

@@ -14,9 +14,9 @@
     <div class="options">
         <input id="colorPicker" type="color" value="#333333" />
         <button id="default-btn" class="btn" onclick="changeColor('black')">Default</button>
-        <button id="rainbow-mode" class="btn">Rainbow Mode</button>
+        <button id="rainbow-mode" class="btn" onclick="changeColor('random')">Rainbow Mode</button>
         <button class="btn" id="eraser-mode" onclick="changeColor('white')">Eraser</button>
-        <button id="clear" class="btn">Clear</button>
+        <button id="clear" class="btn" >Clear</button>
       <div class="slider">
         <p class="slider-info"></p>
         <input type="range" min="0" max="64" value="32" id="myRange" step="1" onchange="changeSize(this.value)"/>
