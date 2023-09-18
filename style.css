@@ -31,6 +31,13 @@ body{
     justify-content: space-evenly;
     margin: 30px;
 }
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin: 30px;
+}
 .btn{
     width: 200px;
     height: 80px;
@@ -57,4 +64,51 @@ body{
 .btn:hover{
     transform: transform 0.1s;
   transform: scale(1.02);
+}
+@media ((max-width: 700px)){
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: -15px;
+    }
+    .title{
+        font-size: 20px;
+        width: 411px;
+        margin-bottom: 90px;
+    }
+    .grid-board{
+        width: 330px;
+        height: 330px;
+        margin-top: -10px;
+        gap: 1px;
+    }
+    .options{
+        display: flex;
+        flex-direction: column;
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+        margin-top: -15px;
+        justify-content: center;
+    }
+    .btn{
+        width: 70px;
+        height: 25px;
+        font-size: 10px;
+    }
+    #colorPicker{
+        width: 80px;
+        height: 30px;
+    }
+    .slider-info{
+        font-size: 20px;
+        margin-top: 3px;
+    }
+    #myRange{
+        margin-top: -5px;
+    }
 }

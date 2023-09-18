@@ -20,7 +20,7 @@ function createElement(size) {
   let amount = size * size;
   for (let i = 0; i < amount; i++) {
     let square = document.createElement("div");
-    square.addEventListener("mouseover", colorSquare);
+    square.addEventListener('mouseover', colorSquare);
     square.style.backgroundColor = "white";
     gridBoard.insertAdjacentElement("beforeend", square);
   }
