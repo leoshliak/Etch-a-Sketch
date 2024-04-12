@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title">
+    <h1>Etch-a-Sketch</h1>
+  </div>
+    <div class="container">
+    <div class="options">
+      <div class = "buttons">
+        <input id="colorPicker" type="color" value="#333333" />
+        <button id="default-btn" class="btn" onclick="changeColor('black')">Default</button>
+        <button id="rainbow-mode" class="btn" onclick="changeColor('random')">Rainbow Mode</button>
+        <button class="btn" id="eraser-mode" onclick="changeColor('white')">Eraser</button>
+        <button id="clear" class="btn" >Clear</button>
+      </div>
+      <div class="slider">
+        <p class="slider-info"></p>
+        <input type="range" min="0" max="64" value="32" id="myRange" step="1" onchange="changeSize(this.value)"/>
+        </div>
+    </div>
+    <div class="grid-board"></div>
+    </div>
+   <script src="script.js"></script>
+</body>
+</html>
